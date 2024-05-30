@@ -1,30 +1,55 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <lay-layout class="example">
+    <lay-header>
+      <lay-button type="primary">
+        <RouterLink to="/register">注册</RouterLink>
+    </lay-button>
+    <lay-button type="normal">
+        <RouterLink to="/login">登录</RouterLink>
+    </lay-button>
+    <lay-button type="warm">
+        <RouterLink to="/forgot-password">找回密码</RouterLink>
+    </lay-button>
+    </lay-header>
+    <lay-body>
+      <router-view />
+    </lay-body>
+    <lay-footer>
+        <p>© 2021-2028</p>
+    </lay-footer>
+  </lay-layout>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.example{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.example .layui-footer,
+.example .layui-header {
+  line-height: 60px;
+  text-align: center;
+  background: #87ca9a;
+  color: white;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.example .layui-side {
+  display: flex;
+  background: #77c38c;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.example .layui-body {
+  display: flex;
+  background: #5FB878;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 </style>
