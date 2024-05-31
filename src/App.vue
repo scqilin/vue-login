@@ -4,31 +4,28 @@
 <template>
   <lay-layout class="example">
     <lay-header>
-      <lay-button type="primary">
-        <RouterLink to="/register">注册</RouterLink>
-    </lay-button>
-    <lay-button type="normal">
-        <RouterLink to="/login">登录</RouterLink>
-    </lay-button>
-    <lay-button type="warm">
-        <RouterLink to="/forgot-password">找回密码</RouterLink>
-    </lay-button>
+      <lay-space>
+        <RouterLink to="/register"><lay-button type="primary">注册</lay-button></RouterLink>
+      <RouterLink to="/login"><lay-button type="normal">登录</lay-button></RouterLink>
+      <RouterLink to="/forgot-password"><lay-button type="warm">找回密码</lay-button></RouterLink>
+      </lay-space>
     </lay-header>
     <lay-body>
       <router-view />
     </lay-body>
     <lay-footer>
-        <p>© 2021-2028</p>
+      <p>© 2021-2028</p>
     </lay-footer>
   </lay-layout>
 </template>
 
 <style scoped>
-.example{
+.example {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
 .example .layui-footer,
 .example .layui-header {
   line-height: 60px;

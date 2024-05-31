@@ -1,0 +1,1 @@
+// declare function encryptAes(data: string): string;
